@@ -1,0 +1,151 @@
+
+.nav-item.nav-link {
+  opacity: 0;
+}
+
+
+.hero{
+    background-image: url(images/JadaGif.gif);
+    background-size: cover; 
+    background-position: center -205px; 
+    width: 100%; 
+    height: 100vh; 
+    position:absolute; 
+    display: flex;   
+    align-items: center;      /* vertical centering */
+    justify-content: center;  /* horizontal centering */
+    overflow:hidden; 
+    background-repeat: no-repeat;
+
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;          /* above hero::after */
+  text-align: center;
+  color: white;
+
+  padding: 32px 48px;
+  border-radius: 40px; /* your rounded look */
+}
+
+/* Haze halo behind the text */
+.hero-content::before {
+  content: "";
+  position: absolute;
+  inset: -50px -250px;        /* how far the haze extends past the text */
+  border-radius: 200px; /* should be >= hero-content radius */
+  z-index: -1;         /* behind text, but within hero-content */
+  pointer-events: none;
+
+  /* frosted glass */
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  /* radial fade (mask reveals the frosted layer) */
+-webkit-mask-image: radial-gradient(
+  ellipse 95% 55% at 50% 50%,
+  rgba(0,0,0,1)    0%,
+  rgba(0,0,0,1)   22%,
+  rgba(0,0,0,0.5) 38%,
+  rgba(0,0,0,0.15)50%,
+  rgba(0,0,0,0)   60%
+);
+mask-image: radial-gradient(
+  ellipse 95% 55% at 50% 50%,
+  rgba(0,0,0,1)    0%,
+  rgba(0,0,0,1)   22%,
+  rgba(0,0,0,0.5) 38%,
+  rgba(0,0,0,0.15)50%,
+  rgba(0,0,0,0)   60%
+)
+}
+
+.hero:after{
+    content: ''; 
+    position: absolute; 
+    align-items: center; 
+    top: 0; 
+    left: 0; 
+    display: black; 
+    width: 100%; 
+    height: 100%; 
+    background: black; 
+    opacity: .3; 
+    z-index: -1; 
+}
+
+
+.content-area{ 
+    height: relative; 
+    position: relative; 
+    background: black;
+    top: 100vh; 
+    padding-top: 5%;
+
+}
+
+
+.BlogSmallerLetter 
+{
+    font-size: 20px;
+    
+    top: 15%; 
+
+    margin: 0; 
+    
+
+}
+
+.BlogImageLeft 
+{
+    height: auto; 
+    Width: 500px; 
+    display: inline-block;
+}
+
+.blogDiv
+{
+    padding-top: 200px; 
+}
+
+
+.blog-container 
+{
+    justify-content: center;
+    margin-top: 40px;
+    display:flex; 
+    grid-template-columns: 100% 100px; 
+    align-self: center;
+    width: 100%;
+    position: relative; 
+
+    
+}
+
+.aligner {
+  display: flex;
+  align-items: center;    /* top-align so text starts above image */
+  gap: 28px;                  /* space between image and text */
+}
+.lalign_text {
+  vertical-align: center;
+  flex: 1 1 auto;
+  min-width: 0;   
+  text-align: left;         /* IMPORTANT: prevents weird overflow */
+  align-items: left; 
+}
+
+.ralign_text {
+  flex: 1 1 auto;
+  min-width: 0;   
+  text-align: right;         /* IMPORTANT: prevents weird overflow */
+  align-items: right; 
+}
+
+
+
+
+
+  

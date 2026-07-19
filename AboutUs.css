@@ -1,0 +1,8 @@
+.content-area{
+    width: 100%; 
+    height: auto; 
+    position: relative; 
+    background: black;
+    overflow: auto; 
+    display:flow-root; 
+}

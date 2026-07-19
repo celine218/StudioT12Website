@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhenItAllBegan</title>
+
+  <link rel="stylesheet" href="animate.css">
+  <link rel="stylesheet" href="passform.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/ddf3d3677b.js" crossorigin="anonymous"></script>
+  <script src="WhenItAllBegan.js" defer></script>
+</head>
+
+<body class="arg-screen">
+    <div class="static-overlay"></div>
+  <form class="passform" onsubmit="return passcheck()">
+  <input type="password" id="pass1" class="terminal-input" placeholder="ENTER PASSWORD" autocomplete="off">
+  <input type="submit" value="UNLOCK">
+  <div id="msg" class="msg" aria-live="polite"></div>
+</form>
+</body>
+</html>
